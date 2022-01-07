@@ -329,7 +329,7 @@ h1 {
     justify-items: center;
   }
 
-  .Heading {
+  .heading-about-us {
     color: white;
     width: 100%;
     text-align: center;
@@ -1104,6 +1104,14 @@ footer {
     }
   }
 
+  .heading-about-us {
+    h1 {
+      font-size: 4rem;
+    }
+    height: 29vh;
+    margin-top: -20vh;
+  }
+
   .store {
     .parent {
       display: flex;
@@ -1132,31 +1140,40 @@ footer {
     }
 
     b {
-      font-size: 3.5em;
+      font-size: 2.6rem;
+      padding: 1rem 3rem;
+      margin-top: 7vh;
     }
 
     .icon-wrap {
-      transform: scale(0.75);
-      -webkit-transform: scale(0.75);
-      -moz-transform: scale(0.75);
-      -ms-transform: scale(0.75);
-      -o-transform: scale(0.75);
+      transform: scale(0.6);
+      -webkit-transform: scale(0.6);
+      -moz-transform: scale(0.6);
+      -ms-transform: scale(0.6);
+      -o-transform: scale(0.6);
     }
 
     @keyframes mymove {
       0% {
-        top: 20vh;
+        top: 15vh;
       }
       50% {
-        top: 25vh;
+        top: 20vh;
       }
       100% {
-        top: 30vh;
+        top: 15vh;
       }
     }
 
     .text {
       font-size: 0.5rem;
+    }
+  }
+
+  .about-us {
+    p {
+      margin-top: 0;
+      width: 70%;
     }
   }
 
@@ -1235,7 +1252,7 @@ footer {
   }
 
   .Heading {
-    grid-area: Heading !important;
+    grid-area: Heading;
   }
 
   .video-1 {

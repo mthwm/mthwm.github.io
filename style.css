@@ -380,7 +380,7 @@ h1 {
   justify-items: center;
 }
 
-.about-us .Heading {
+.about-us .heading-about-us {
   color: white;
   width: 100%;
   text-align: center;
@@ -1286,6 +1286,13 @@ footer .mthwm-links a:hover {
   .videos h1 {
     font-size: 4rem;
   }
+  .heading-about-us {
+    height: 29vh;
+    margin-top: -20vh;
+  }
+  .heading-about-us h1 {
+    font-size: 4rem;
+  }
   .store .parent {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1309,39 +1316,45 @@ footer .mthwm-links a:hover {
     font-size: 3.5em;
   }
   .hero b {
-    font-size: 3.5em;
+    font-size: 2.6rem;
+    padding: 1rem 3rem;
+    margin-top: 7vh;
   }
   .hero .icon-wrap {
-    transform: scale(0.75);
-    -webkit-transform: scale(0.75);
-    -moz-transform: scale(0.75);
-    -ms-transform: scale(0.75);
-    -o-transform: scale(0.75);
+    transform: scale(0.6);
+    -webkit-transform: scale(0.6);
+    -moz-transform: scale(0.6);
+    -ms-transform: scale(0.6);
+    -o-transform: scale(0.6);
   }
   @-webkit-keyframes mymove {
     0% {
-      top: 20vh;
+      top: 15vh;
     }
     50% {
-      top: 25vh;
+      top: 20vh;
     }
     100% {
-      top: 30vh;
+      top: 15vh;
     }
   }
   @keyframes mymove {
     0% {
-      top: 20vh;
+      top: 15vh;
     }
     50% {
-      top: 25vh;
+      top: 20vh;
     }
     100% {
-      top: 30vh;
+      top: 15vh;
     }
   }
   .hero .text {
     font-size: 0.5rem;
+  }
+  .about-us p {
+    margin-top: 0;
+    width: 70%;
   }
   footer .container {
     display: -webkit-box;
@@ -1406,9 +1419,9 @@ footer .mthwm-links a:hover {
     right: 2rem;
   }
   .Heading {
-    -ms-grid-row: 1 !important;
-    -ms-grid-column: 1 !important;
-    grid-area: Heading !important;
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: Heading;
   }
   .video-1 {
     -ms-grid-row: 2 !important;
