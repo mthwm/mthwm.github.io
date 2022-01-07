@@ -1,0 +1,674 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 100vw;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  background-color: #080808;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+main {
+  width: 100%;
+  padding-bottom: 33vh;
+  margin-bottom: 33vh;
+  padding-left: 6rem;
+  padding-right: 10rem;
+  z-index: 999;
+  background: linear-gradient(
+    180deg,
+    rgba(6, 6, 6, 1) 15%,
+    rgba(8, 8, 8, 1) 100%
+  );
+  box-shadow: 0 5px 15px 10px #040404;
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: 1fr repeat(2, 0.5fr);
+  grid-template-rows: 1fr 1.5fr repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  height: 85vh;
+  position: relative;
+  top: 15vh;
+  margin-inline: 4rem;
+}
+
+.div1 {
+  grid-area: 1 / 1 / 5 / 2;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  #mthwm {
+    background: url(/assets/mthwm.jpg);
+    background-size: cover;
+    background-position-x: center;
+  }
+
+  #cenda {
+    background: url(/assets/cenda.jpg);
+    background-size: cover;
+    background-position-x: center;
+  }
+
+  #havelos {
+    background: url(/assets/havelos.jpg);
+    background-size: cover;
+    background-position-x: center;
+  }
+
+  #lukyyyn {
+    background: url(/assets/luky.jpg);
+    background-size: cover;
+    background-position-x: center;
+  }
+
+  #ghaden {
+    background: url(/assets/ghaden.jpg);
+    background-size: cover;
+    background-position-x: center;
+  }
+
+  .img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    overflow: hidden in !important;
+    width: 40%;
+    height: 80%;
+
+    border-radius: 25px;
+    box-shadow: 5px 5px 10px 3px hsla(0, 0%, 0%, 0.445);
+    border: solid 5px #6f00ff;
+  }
+}
+
+.div2 {
+  grid-area: 5 / 1 / 6 / 2;
+  position: relative;
+
+  button {
+    position: relative;
+
+    font-family: "Bebas Neue", cursive;
+    color: #fff;
+    background: none;
+    font-size: 2rem;
+    border: none;
+    box-shadow: 5px 5px 10px 3px hsla(0, 0%, 0%, 0.445);
+    border-radius: 25px;
+
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    padding: 10px 50px;
+    cursor: pointer;
+    transition: all ease 0.125s;
+
+    &:hover {
+      background-color: #6f00ff;
+      box-shadow: 0 0 20px 1px #6f00ff;
+    }
+
+    i {
+      margin-left: 1rem;
+    }
+  }
+}
+
+.div3 {
+  grid-area: 1 / 2 / 2 / 4;
+  display: grid;
+  place-content: center;
+
+  h1 {
+    display: inline;
+    font-size: 3vw;
+    font-family: "Bebas Neue", cursive;
+    color: #fff;
+  }
+
+  b {
+    display: inline;
+    margin-inline: 1rem;
+    font-size: 3vw;
+    font-family: "Bebas Neue", cursive;
+    color: #6f00ff;
+
+    &::before {
+      content: open-quote;
+      color: #fff;
+      font-size: 4rem;
+    }
+
+    &::after {
+      content: close-quote;
+      color: #fff;
+      font-size: 4rem;
+    }
+  }
+}
+
+.div4 {
+  grid-area: 2 / 2 / 3 / 4;
+  color: #fff;
+  display: grid;
+  place-content: center;
+  font-family: "Bebas Neue", cursive;
+  font-size: 2.5vw;
+
+  b {
+    color: #6f00ff;
+  }
+
+  #cendovaHlaska {
+    font-size: 2.2vw !important;
+  }
+
+  .text {
+    position: relative;
+
+    &::before {
+      content: open-quote;
+      color: #6f00ff;
+      font-size: 8rem;
+      position: absolute;
+      top: -3rem;
+      left: -3rem;
+    }
+
+    &::after {
+      content: close-quote;
+      color: #6f00ff;
+      font-size: 8rem;
+      position: absolute;
+      top: -3rem;
+      right: -3rem;
+    }
+  }
+}
+
+#mthwm-monitor {
+  &:hover::after {
+    content: '24" Acer KG241QP Gaming | 144hz';
+  }
+}
+
+#mthwm-mouse {
+  &:hover::after {
+    content: "Glorious Model D";
+  }
+}
+#mthwm-keyboard {
+  &:hover::after {
+    content: "Niceboy ORYX K610 Chameleon";
+  }
+}
+
+#mthwm-headset {
+  &:hover::after {
+    content: "HyperX Cloud Stinger Core 7.1";
+  }
+}
+
+#cenda-monitor {
+  &:hover::after {
+    content: '27" Samsung Odyssey C27RG50 | 240hz';
+  }
+}
+
+#cenda-mouse {
+  &:hover::after {
+    content: "Logitech G403 Hero";
+  }
+}
+#cenda-keyboard {
+  &:hover::after {
+    content: "HyperX Alloy FPS, Cherry MX Red";
+  }
+}
+
+#cenda-headset {
+  &:hover::after {
+    content: "HyperX Cloud Alpha";
+  }
+}
+
+#lukyn-monitor {
+  &:hover::after {
+    content: '24" Dell Gaming S2422HG Curved';
+  }
+}
+
+#lukyn-mouse {
+  &:hover::after {
+    content: "Zowie ec-2b divina pink";
+  }
+}
+#lukyn-keyboard {
+  &:hover::after {
+    content: "HyperX Alloy FPS, Cherry MX Red";
+  }
+}
+
+#lukyn-headset {
+  &:hover::after {
+    content: "HyperX Cloud II";
+  }
+}
+
+#havelos-monitor {
+  &:hover::after {
+    content: '24.5" Lenovo Gaming G25-10 | 144hz';
+  }
+}
+
+#havelos-mouse {
+  &:hover::after {
+    content: "Logitech G Pro X Superlight";
+  }
+}
+#havelos-keyboard {
+  &:hover::after {
+    content: "HyperX Alloy FPS, Cherry MX Red";
+  }
+}
+
+#havelos-headset {
+  &:hover::after {
+    content: "Logitech G Pro X";
+  }
+}
+
+#ghaden-monitor {
+  &:hover::after {
+    content: 'LCD monitor 24" ASUS VG24VQ | 144hz';
+  }
+}
+
+#ghaden-mouse {
+  &:hover::after {
+    content: "Logitech G Pro Wireless";
+  }
+}
+#ghaden-keyboard {
+  &:hover::after {
+    content: "SPC Gear GK550 Omnis Kailh Brown RGB";
+  }
+}
+
+#ghaden-headset {
+  &:hover::after {
+    content: "HyperX Cloud II Wireless";
+  }
+}
+
+.div5,
+.div6,
+.div7,
+.div8 {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0;
+    background-color: #000000e5;
+    bottom: 0;
+    transition: all ease-out 0.125s;
+  }
+
+  &:hover::after {
+    content: "";
+    font-size: 1rem;
+    position: absolute;
+    width: 100%;
+    height: 35%;
+    background-color: #000000e5;
+    bottom: 0;
+    color: white;
+    display: grid;
+    place-content: center;
+    font-family: "Bebas Neue", cursive;
+  }
+}
+
+.div5 {
+  grid-area: 3 / 2 / 4 / 3;
+  background-color: white;
+  margin: 1rem;
+  border-radius: 25px;
+
+  img {
+    height: 10vh;
+    width: auto;
+  }
+}
+.div6 {
+  grid-area: 3 / 3 / 4 / 4;
+  background-color: white;
+  margin: 1rem;
+  border-radius: 25px;
+
+  img {
+    height: 10vh;
+    width: auto;
+  }
+}
+.div7 {
+  grid-area: 4 / 2 / 5 / 3;
+  background-color: white;
+  margin: 1rem;
+  border-radius: 25px;
+
+  img {
+    height: 10vh;
+    width: auto;
+  }
+}
+.div8 {
+  grid-area: 4 / 3 / 5 / 4;
+  background-color: white;
+  margin: 1rem;
+  border-radius: 25px;
+
+  img {
+    height: 10vh;
+    width: auto;
+  }
+}
+.div9 {
+  grid-area: 5 / 2 / 6 / 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .mthwm-links {
+    grid-area: mthwm-links;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 50%;
+
+    a {
+      color: white;
+      padding-inline: 10px;
+      transform: scale(2.5);
+      cursor: pointer;
+      transition: all ease-in-out 0.25s;
+      text-decoration: none;
+      -webkit-transform: scale(2.5);
+      -moz-transform: scale(2.5);
+      -ms-transform: scale(2.5);
+      -o-transform: scale(2.5);
+    }
+  }
+
+  .cenda-links {
+    grid-area: cenda-links;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    a {
+      color: white;
+      padding-inline: 10px;
+      transform: scale(1.5);
+      cursor: pointer;
+      transition: all ease-in-out 0.25s;
+      text-decoration: none;
+    }
+  }
+
+  .cenda-links a:hover,
+  .mthwm-links a:hover {
+    color: #6f00ff;
+    text-shadow: #6f00ff 0 0 5px;
+    transform: rotate(5deg) scale(3);
+  }
+}
+
+.div5,
+.div6,
+.div7,
+.div8 {
+  color: white;
+  font-family: Helvetica;
+  display: grid;
+  place-content: center;
+}
+
+footer {
+  background-color: #101010;
+  z-index: -5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  height: 33vh;
+  color: white;
+  font-family: "Mukta", sans-serif;
+  background: linear-gradient(
+    180deg,
+    rgba(16, 16, 16, 1) 0%,
+    rgba(8, 8, 8, 1) 100%
+  );
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 25px 100px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "mthwm cenda"
+      "mthwm-links cenda-links";
+    font-size: 16px;
+  }
+
+  .mthwm {
+    grid-area: mthwm;
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+
+    a {
+      font-weight: 900;
+      text-decoration: none;
+      color: #6f00ff;
+      margin-left: 5px;
+      position: relative;
+
+      &:hover::after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 2px;
+        background-color: #6f00ff;
+        bottom: -1px;
+        left: 0px;
+        transform-origin: right;
+      }
+
+      &::after {
+        position: absolute;
+        content: "";
+        width: 0px;
+        height: 2px;
+        background-color: #6f00ff;
+        bottom: -1px;
+        right: 0px;
+        transition: all ease-in-out 0.25s;
+        transform-origin: right;
+      }
+    }
+  }
+
+  .cenda {
+    grid-area: cenda;
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+
+    a {
+      font-weight: 900;
+      text-decoration: none;
+      color: #6f00ff;
+      margin-left: 5px;
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: "";
+        width: 0px;
+        height: 2px;
+        background-color: #6f00ff;
+        bottom: -3px;
+        right: 0px;
+        transition: all ease-in-out 0.25s;
+        transform-origin: right;
+      }
+
+      &:hover::after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 2px;
+        background-color: #6f00ff;
+        bottom: -3px;
+        left: 0px;
+        transform-origin: right;
+      }
+    }
+  }
+
+  .mthwm-links {
+    grid-area: mthwm-links;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    a {
+      color: white;
+      padding-inline: 10px;
+      transform: scale(1.5);
+      cursor: pointer;
+      transition: all ease-in-out 0.25s;
+      text-decoration: none;
+    }
+  }
+
+  .cenda-links {
+    grid-area: cenda-links;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    a {
+      color: white;
+      padding-inline: 10px;
+      transform: scale(1.5);
+      cursor: pointer;
+      transition: all ease-in-out 0.25s;
+      text-decoration: none;
+    }
+  }
+
+  .cenda-links a:hover,
+  .mthwm-links a:hover {
+    color: #6f00ff;
+    text-shadow: #6f00ff 0 0 5px;
+    transform: rotate(5deg) scale(3);
+  }
+}

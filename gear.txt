@@ -1,0 +1,36 @@
+bylo by cool kdyby tam u toho rosteru jak si nás rozklikneš tak informace kdo má jakou myš a klávesnici popřípadně headset
+
+mthwm {
+    monitor: 24" Acer KG241QP Gaming | 144hz
+    myš: Glorious Model D
+    klávesnice: Niceboy ORYX K610 Chameleon
+    headset: HyperX Cloud Stinger Core 7.1 | https://www.hyperxgaming.com/czech/us/headsets/cloud-stinger-core-pc-gaming-headset?model=7.1%20surround
+}
+
+Havel {
+    monitor: 24.5" Lenovo Gaming G25-10 | 144hz
+    myš: Logitech G Pro X Superlight
+    klávesnice: HyperX Alloy FPS, Cherry MX Red
+    headset: Logitech G Pro X
+}
+
+Čenda {
+    monitor: 27" Samsung Odyssey C27RG50 | 240hz
+    myš: Logitech G403 Hero
+    klávesnice: HyperX Alloy FPS, Cherry MX Red
+    headset: HyperX Cloud Alpha
+}
+
+Lukyyyn {
+    monitor: 
+    myš: Roztomilá bezdrátová počítačová myš pro Dívky Hello Kitty
+    klávesnice: HyperX Alloy FPS, Cherry MX Red
+    headset: HyperX Cloud II
+}
+
+Ghaden {
+    monitor: LCD monitor 24" ASUS VG24VQ | 144hz
+    myš: Logitech G Pro Wireless
+    klávesnice: SPC Gear GK550 Omnis Kailh Brown RGB
+    headset: HyperX Cloud II Wireless
+}

@@ -1,0 +1,778 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 100vw;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  background-color: #080808;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+main {
+  width: 100%;
+  padding-bottom: 33vh;
+  margin-bottom: 33vh;
+  padding-left: 6rem;
+  padding-right: 10rem;
+  z-index: 999;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(15%, #060606), to(#080808));
+  background: linear-gradient(180deg, #060606 15%, #080808 100%);
+  -webkit-box-shadow: 0 5px 15px 10px #040404;
+          box-shadow: 0 5px 15px 10px #040404;
+}
+
+.parent {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr (0.5fr)[2];
+      grid-template-columns: 1fr repeat(2, 0.5fr);
+  -ms-grid-rows: 1fr 1.5fr (1fr)[3];
+      grid-template-rows: 1fr 1.5fr repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  height: 85vh;
+  position: relative;
+  top: 15vh;
+  margin-inline: 4rem;
+}
+
+.div1 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 1 / 1 / 5 / 2;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+.div1 #mthwm {
+  background: url(/assets/mthwm.jpg);
+  background-size: cover;
+  background-position-x: center;
+}
+
+.div1 #cenda {
+  background: url(/assets/cenda.jpg);
+  background-size: cover;
+  background-position-x: center;
+}
+
+.div1 #havelos {
+  background: url(/assets/havelos.jpg);
+  background-size: cover;
+  background-position-x: center;
+}
+
+.div1 #lukyyyn {
+  background: url(/assets/luky.jpg);
+  background-size: cover;
+  background-position-x: center;
+}
+
+.div1 #ghaden {
+  background: url(/assets/ghaden.jpg);
+  background-size: cover;
+  background-position-x: center;
+}
+
+.div1 .img-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 1;
+  overflow: hidden in !important;
+  width: 40%;
+  height: 80%;
+  border-radius: 25px;
+  -webkit-box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.445);
+          box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.445);
+  border: solid 5px #6f00ff;
+}
+
+.div2 {
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 5 / 1 / 6 / 2;
+  position: relative;
+}
+
+.div2 button {
+  position: relative;
+  font-family: "Bebas Neue", cursive;
+  color: #fff;
+  background: none;
+  font-size: 2rem;
+  border: none;
+  -webkit-box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.445);
+          box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.445);
+  border-radius: 25px;
+  left: 50%;
+  top: 30%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  padding: 10px 50px;
+  cursor: pointer;
+  -webkit-transition: all ease 0.125s;
+  transition: all ease 0.125s;
+}
+
+.div2 button:hover {
+  background-color: #6f00ff;
+  -webkit-box-shadow: 0 0 20px 1px #6f00ff;
+          box-shadow: 0 0 20px 1px #6f00ff;
+}
+
+.div2 button i {
+  margin-left: 1rem;
+}
+
+.div3 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: 1 / 2 / 2 / 4;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+}
+
+.div3 h1 {
+  display: inline;
+  font-size: 3vw;
+  font-family: "Bebas Neue", cursive;
+  color: #fff;
+}
+
+.div3 b {
+  display: inline;
+  margin-inline: 1rem;
+  font-size: 3vw;
+  font-family: "Bebas Neue", cursive;
+  color: #6f00ff;
+}
+
+.div3 b::before {
+  content: open-quote;
+  color: #fff;
+  font-size: 4rem;
+}
+
+.div3 b::after {
+  content: close-quote;
+  color: #fff;
+  font-size: 4rem;
+}
+
+.div4 {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: 2 / 2 / 3 / 4;
+  color: #fff;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  font-family: "Bebas Neue", cursive;
+  font-size: 2.5vw;
+}
+
+.div4 b {
+  color: #6f00ff;
+}
+
+.div4 #cendovaHlaska {
+  font-size: 2.2vw !important;
+}
+
+.div4 .text {
+  position: relative;
+}
+
+.div4 .text::before {
+  content: open-quote;
+  color: #6f00ff;
+  font-size: 8rem;
+  position: absolute;
+  top: -3rem;
+  left: -3rem;
+}
+
+.div4 .text::after {
+  content: close-quote;
+  color: #6f00ff;
+  font-size: 8rem;
+  position: absolute;
+  top: -3rem;
+  right: -3rem;
+}
+
+#mthwm-monitor:hover::after {
+  content: '24" Acer KG241QP Gaming | 144hz';
+}
+
+#mthwm-mouse:hover::after {
+  content: "Glorious Model D";
+}
+
+#mthwm-keyboard:hover::after {
+  content: "Niceboy ORYX K610 Chameleon";
+}
+
+#mthwm-headset:hover::after {
+  content: "HyperX Cloud Stinger Core 7.1";
+}
+
+#cenda-monitor:hover::after {
+  content: '27" Samsung Odyssey C27RG50 | 240hz';
+}
+
+#cenda-mouse:hover::after {
+  content: "Logitech G403 Hero";
+}
+
+#cenda-keyboard:hover::after {
+  content: "HyperX Alloy FPS, Cherry MX Red";
+}
+
+#cenda-headset:hover::after {
+  content: "HyperX Cloud Alpha";
+}
+
+#lukyn-monitor:hover::after {
+  content: '24" Dell Gaming S2422HG Curved';
+}
+
+#lukyn-mouse:hover::after {
+  content: "Zowie ec-2b divina pink";
+}
+
+#lukyn-keyboard:hover::after {
+  content: "HyperX Alloy FPS, Cherry MX Red";
+}
+
+#lukyn-headset:hover::after {
+  content: "HyperX Cloud II";
+}
+
+#havelos-monitor:hover::after {
+  content: '24.5" Lenovo Gaming G25-10 | 144hz';
+}
+
+#havelos-mouse:hover::after {
+  content: "Logitech G Pro X Superlight";
+}
+
+#havelos-keyboard:hover::after {
+  content: "HyperX Alloy FPS, Cherry MX Red";
+}
+
+#havelos-headset:hover::after {
+  content: "Logitech G Pro X";
+}
+
+#ghaden-monitor:hover::after {
+  content: 'LCD monitor 24" ASUS VG24VQ | 144hz';
+}
+
+#ghaden-mouse:hover::after {
+  content: "Logitech G Pro Wireless";
+}
+
+#ghaden-keyboard:hover::after {
+  content: "SPC Gear GK550 Omnis Kailh Brown RGB";
+}
+
+#ghaden-headset:hover::after {
+  content: "HyperX Cloud II Wireless";
+}
+
+.div5,
+.div6,
+.div7,
+.div8 {
+  position: relative;
+}
+
+.div5::after,
+.div6::after,
+.div7::after,
+.div8::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0;
+  background-color: #000000e5;
+  bottom: 0;
+  -webkit-transition: all ease-out 0.125s;
+  transition: all ease-out 0.125s;
+}
+
+.div5:hover::after,
+.div6:hover::after,
+.div7:hover::after,
+.div8:hover::after {
+  content: "";
+  font-size: 1rem;
+  position: absolute;
+  width: 100%;
+  height: 35%;
+  background-color: #000000e5;
+  bottom: 0;
+  color: white;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  font-family: "Bebas Neue", cursive;
+}
+
+.div5 {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 3 / 2 / 4 / 3;
+  background-color: white;
+  margin: 1rem;
+  border-radius: 25px;
+}
+
+.div5 img {
+  height: 10vh;
+  width: auto;
+}
+
+.div6 {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-area: 3 / 3 / 4 / 4;
+  background-color: white;
+  margin: 1rem;
+  border-radius: 25px;
+}
+
+.div6 img {
+  height: 10vh;
+  width: auto;
+}
+
+.div7 {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 4 / 2 / 5 / 3;
+  background-color: white;
+  margin: 1rem;
+  border-radius: 25px;
+}
+
+.div7 img {
+  height: 10vh;
+  width: auto;
+}
+
+.div8 {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-area: 4 / 3 / 5 / 4;
+  background-color: white;
+  margin: 1rem;
+  border-radius: 25px;
+}
+
+.div8 img {
+  height: 10vh;
+  width: auto;
+}
+
+.div9 {
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: 5 / 2 / 6 / 4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.div9 .mthwm-links {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: mthwm-links;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50%;
+}
+
+.div9 .mthwm-links a {
+  color: white;
+  padding-inline: 10px;
+  transform: scale(2.5);
+  cursor: pointer;
+  -webkit-transition: all ease-in-out 0.25s;
+  transition: all ease-in-out 0.25s;
+  text-decoration: none;
+  -webkit-transform: scale(2.5);
+  -moz-transform: scale(2.5);
+  -ms-transform: scale(2.5);
+  -o-transform: scale(2.5);
+}
+
+.div9 .cenda-links {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: cenda-links;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.div9 .cenda-links a {
+  color: white;
+  padding-inline: 10px;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  cursor: pointer;
+  -webkit-transition: all ease-in-out 0.25s;
+  transition: all ease-in-out 0.25s;
+  text-decoration: none;
+}
+
+.div9 .cenda-links a:hover,
+.div9 .mthwm-links a:hover {
+  color: #6f00ff;
+  text-shadow: #6f00ff 0 0 5px;
+  -webkit-transform: rotate(5deg) scale(3);
+          transform: rotate(5deg) scale(3);
+}
+
+.div5,
+.div6,
+.div7,
+.div8 {
+  color: white;
+  font-family: Helvetica;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+}
+
+footer {
+  background-color: #101010;
+  z-index: -5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  height: 33vh;
+  color: white;
+  font-family: "Mukta", sans-serif;
+  background: -webkit-gradient(linear, left top, left bottom, from(#101010), to(#080808));
+  background: linear-gradient(180deg, #101010 0%, #080808 100%);
+}
+
+footer .container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  gap: 25px 100px;
+  grid-auto-flow: row;
+      grid-template-areas: "mthwm cenda" "mthwm-links cenda-links";
+  font-size: 16px;
+}
+
+footer .mthwm {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: mthwm;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 18px;
+}
+
+footer .mthwm a {
+  font-weight: 900;
+  text-decoration: none;
+  color: #6f00ff;
+  margin-left: 5px;
+  position: relative;
+}
+
+footer .mthwm a:hover::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #6f00ff;
+  bottom: -1px;
+  left: 0px;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+}
+
+footer .mthwm a::after {
+  position: absolute;
+  content: "";
+  width: 0px;
+  height: 2px;
+  background-color: #6f00ff;
+  bottom: -1px;
+  right: 0px;
+  -webkit-transition: all ease-in-out 0.25s;
+  transition: all ease-in-out 0.25s;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+}
+
+footer .cenda {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: cenda;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 18px;
+}
+
+footer .cenda a {
+  font-weight: 900;
+  text-decoration: none;
+  color: #6f00ff;
+  margin-left: 5px;
+  position: relative;
+}
+
+footer .cenda a::after {
+  position: absolute;
+  content: "";
+  width: 0px;
+  height: 2px;
+  background-color: #6f00ff;
+  bottom: -3px;
+  right: 0px;
+  -webkit-transition: all ease-in-out 0.25s;
+  transition: all ease-in-out 0.25s;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+}
+
+footer .cenda a:hover::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #6f00ff;
+  bottom: -3px;
+  left: 0px;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+}
+
+footer .mthwm-links {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: mthwm-links;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .mthwm-links a {
+  color: white;
+  padding-inline: 10px;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  cursor: pointer;
+  -webkit-transition: all ease-in-out 0.25s;
+  transition: all ease-in-out 0.25s;
+  text-decoration: none;
+}
+
+footer .cenda-links {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: cenda-links;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .cenda-links a {
+  color: white;
+  padding-inline: 10px;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  cursor: pointer;
+  -webkit-transition: all ease-in-out 0.25s;
+  transition: all ease-in-out 0.25s;
+  text-decoration: none;
+}
+
+footer .cenda-links a:hover,
+footer .mthwm-links a:hover {
+  color: #6f00ff;
+  text-shadow: #6f00ff 0 0 5px;
+  -webkit-transform: rotate(5deg) scale(3);
+          transform: rotate(5deg) scale(3);
+}
+/*# sourceMappingURL=roster.css.map */
