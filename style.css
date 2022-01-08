@@ -336,6 +336,11 @@ h1 {
 .about-us .dropdown {
   position: relative;
   display: inline-block;
+  transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+  -moz-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  -o-transform: scale(1.5);
 }
 
 .about-us .dropdown-content {
@@ -389,7 +394,7 @@ h1 {
 .about-us p {
   color: white;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.5rem;
+  font-size: 2rem;
   width: 50%;
   text-align: center;
 }
