@@ -38,6 +38,36 @@ body {
   background: #555;
 }
 
+.factsDiv {
+  width: 20vw;
+  height: 10vh;
+  background: #6f00ff;
+  position: fixed;
+  bottom: 2rem;
+  right: 0;
+  z-index: 20;
+  transition: all 0.125s ease-in-out;
+  -webkit-transition: all 0.125s ease-in-out;
+  -moz-transition: all 0.125s ease-in-out;
+  -ms-transition: all 0.125s ease-in-out;
+  -o-transition: all 0.125s ease-in-out;
+
+  .closeFacts {
+    position: relative;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 10%;
+    display: grid;
+    place-content: center;
+
+    i {
+      font-size: 2rem;
+      color: white;
+    }
+  }
+}
+
 #factsToggle {
   position: fixed;
   z-index: 1;
@@ -47,6 +77,11 @@ body {
   border: none;
   background: none;
   cursor: pointer;
+  transition: all 0.125s ease-in-out;
+  -webkit-transition: all 0.125s ease-in-out;
+  -moz-transition: all 0.125s ease-in-out;
+  -ms-transition: all 0.125s ease-in-out;
+  -o-transition: all 0.125s ease-in-out;
 
   i {
     color: white;
