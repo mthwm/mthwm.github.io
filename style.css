@@ -68,12 +68,28 @@ body {
   -o-transition: all 0.125s ease-in-out;
 }
 
+.factsDiv .fact {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 75%;
+  width: 80%;
+  margin-right: 5%;
+  color: white;
+  font-family: "Bebas Neue", cursive;
+  font-size: 1.5rem;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+}
+
 .factsDiv .factsSkip {
   position: absolute;
   width: 90%;
-  height: 15%;
+  height: 25%;
   bottom: 0;
   right: 0;
+  background-color: rgba(0, 0, 0, 0.1);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -95,6 +111,9 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   cursor: pointer;
 }
 
@@ -111,6 +130,9 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   cursor: pointer;
 }
 
@@ -119,15 +141,21 @@ body {
 }
 
 .factsDiv .closeFacts {
-  position: relative;
+  position: absolute;
   left: 0;
   top: 0;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.1);
   width: 10%;
-  display: -ms-grid;
-  display: grid;
-  place-content: center;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   cursor: pointer;
 }
 
@@ -1597,9 +1625,20 @@ footer .mthwm-links a:hover {
     width: 100%;
     height: auto;
   }
+  #factsToggle {
+    right: 1rem;
+    transform: scale(0.75);
+    -webkit-transform: scale(0.75);
+    -moz-transform: scale(0.75);
+    -ms-transform: scale(0.75);
+    -o-transform: scale(0.75);
+  }
   .factsDiv {
     width: 100%;
     height: 15vh;
+  }
+  .factsDiv .fact {
+    font-size: 1rem;
   }
 }
 /*# sourceMappingURL=style.css.map */

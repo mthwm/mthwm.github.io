@@ -66,15 +66,30 @@ let toggleFacts = () => {
   const factsSkip = document.createElement("div");
   const nextFact = document.createElement("div");
   const previousFact = document.createElement("div");
+  const fact = document.createElement("div");
   closeFacts.onclick = () => {
     factsDiv.style.width = "0";
     factsDiv.style.right = "-5rem";
+    fact.innerHTML = "";
     setTimeout(function () {
       factsShowButton.style.right = "4rem";
+
+      var x = window.matchMedia("(max-width: 935px)");
+      myFunction(x);
+      x.addListener(myFunction);
+
+      function myFunction(x) {
+        if (x.matches) {
+          factsShowButton.style.right = "1rem";
+        } else {
+          factsShowButton.style.right = "4rem";
+        }
+      }
     }, 250);
   };
   document.body.appendChild(factsDiv);
   factsDiv.appendChild(closeFacts);
+  factsDiv.appendChild(fact);
   factsDiv.appendChild(factsSkip);
   factsSkip.appendChild(previousFact);
   factsSkip.appendChild(nextFact);
@@ -85,6 +100,7 @@ let toggleFacts = () => {
   factsDiv.className = "factsDiv";
   factsSkip.className = "factsSkip";
   nextFact.className = "nextFact";
+  fact.className = "fact";
   previousFact.className = "previousFact";
   factsDiv.style.width = "0vw";
   factsDiv.style.right = "-5rem";
@@ -107,7 +123,7 @@ let toggleFacts = () => {
     x.addListener(myFunction);
 
     setTimeout(function () {
-      //
-    }, 250);
+      fact.innerHTML = facts[8];
+    }, 200);
   }, 250);
 };
