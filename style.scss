@@ -511,7 +511,7 @@ h1 {
 .videos {
   min-height: 100vh;
   padding-bottom: 20vh;
-  display: grid;
+  display: flex;
   z-index: 6;
   position: relative;
   background: linear-gradient(180deg, #050505 15%, #060606 100%);
@@ -533,8 +533,6 @@ h1 {
     display: grid;
     width: 100%;
     height: 100%;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 2rem;
     grid-row-gap: 2rem;
 
