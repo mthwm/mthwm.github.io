@@ -105,6 +105,28 @@ let toggleFacts = () => {
   factsDiv.style.width = "0vw";
   factsDiv.style.right = "-5rem";
   factsDiv.style.bottom = "0";
+  var currentFact = 0;
+
+  nextFact.onclick = () => {
+    currentFact++;
+
+    if (currentFact == 20) {
+      currentFact = 0;
+    }
+
+    fact.innerHTML = facts[currentFact];
+  };
+
+  previousFact.onclick = () => {
+    currentFact--;
+
+    if (currentFact == -1) {
+      currentFact = 19;
+    }
+
+    fact.innerHTML = facts[currentFact];
+  };
+
   setTimeout(function () {
     factsDiv.style.right = "0";
 
@@ -123,7 +145,7 @@ let toggleFacts = () => {
     x.addListener(myFunction);
 
     setTimeout(function () {
-      fact.innerHTML = facts[8];
+      fact.innerHTML = facts[0];
     }, 200);
   }, 250);
 };
