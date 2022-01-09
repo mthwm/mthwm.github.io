@@ -60,6 +60,13 @@ body {
     width: 10%;
     display: grid;
     place-content: center;
+    cursor: pointer;
+
+    &:hover {
+      i {
+        text-shadow: black 0 0 10px;
+      }
+    }
 
     i {
       font-size: 2rem;

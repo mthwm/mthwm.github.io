@@ -69,6 +69,11 @@ body {
   display: -ms-grid;
   display: grid;
   place-content: center;
+  cursor: pointer;
+}
+
+.factsDiv .closeFacts:hover i {
+  text-shadow: black 0 0 10px;
 }
 
 .factsDiv .closeFacts i {

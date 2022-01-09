@@ -63,6 +63,13 @@ let toggleFacts = () => {
 
   const factsDiv = document.createElement("div");
   const closeFacts = document.createElement("div");
+  closeFacts.onclick = () => {
+    factsDiv.style.width = "0";
+    factsDiv.style.right = "-5rem";
+    setTimeout(function () {
+      factsShowButton.style.right = "4rem";
+    }, 250);
+  };
   document.body.appendChild(factsDiv);
   factsDiv.appendChild(closeFacts);
   closeFacts.innerHTML = '<i class="fas fa-chevron-right"></i>';
@@ -76,6 +83,8 @@ let toggleFacts = () => {
       if (x.matches) {
         // If media query matches
         factsDiv.style.width = "100vw";
+        factsDiv.style.bottom = "0";
+        factsDiv.style.height = "15vh";
       } else {
         factsDiv.style.width = "30vw";
       }
