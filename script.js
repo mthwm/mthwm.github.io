@@ -71,8 +71,19 @@ let toggleFacts = () => {
   factsDiv.style.width = "0vw";
   factsDiv.style.right = "-5rem";
   setTimeout(function () {
-    factsDiv.style.width = "30vw";
     factsDiv.style.right = "0";
+    function myFunction(x) {
+      if (x.matches) {
+        // If media query matches
+        factsDiv.style.width = "100vw";
+      } else {
+        factsDiv.style.width = "30vw";
+      }
+    }
+
+    var x = window.matchMedia("(max-width: 935px)");
+    myFunction(x); // Call listener function at run time
+    x.addListener(myFunction); // Attach listener function on state changes
 
     setTimeout(function () {
       //
