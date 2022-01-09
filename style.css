@@ -45,6 +45,30 @@ body {
   background: #555;
 }
 
+#factsToggle {
+  position: fixed;
+  z-index: 1;
+  bottom: 2rem;
+  right: 4rem;
+  z-index: 10;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+#factsToggle i {
+  color: white;
+  transition: all 0.125s ease-in-out;
+  -webkit-transition: all 0.125s ease-in-out;
+  -moz-transition: all 0.125s ease-in-out;
+  -ms-transition: all 0.125s ease-in-out;
+  -o-transition: all 0.125s ease-in-out;
+}
+
+#factsToggle:hover i {
+  color: #6f00ff;
+}
+
 .nav-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -245,12 +269,21 @@ body {
   border-radius: 50%;
   cursor: pointer;
   position: relative;
+  transition: all ease-in-out 0.25s;
+  -webkit-transition: all ease-in-out 0.25s;
+  -moz-transition: all ease-in-out 0.25s;
+  -ms-transition: all ease-in-out 0.25s;
+  -o-transition: all ease-in-out 0.25s;
 }
 
 .main .hero .wrap .icon-wrap:hover {
   border-color: #6f00ff;
   -webkit-box-shadow: #6f00ff 0 0 10px;
           box-shadow: #6f00ff 0 0 10px;
+}
+
+.main .hero .wrap .icon-wrap:hover i {
+  color: #6f00ff;
 }
 
 .main .hero .wrap i {
@@ -312,13 +345,6 @@ h1 {
   place-content: center;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(15%, #050505), to(#040404));
   background: linear-gradient(180deg, #050505 15%, #040404 100%);
-  /* Dropdown Button */
-  /* The container <div> - needed to position the dropdown content */
-  /* Dropdown Content (Hidden by Default) */
-  /* Links inside the dropdown */
-  /* Change color of dropdown links on hover */
-  /* Show the dropdown menu on hover */
-  /* Change the background color of the dropdown button when the dropdown content is shown */
 }
 
 .about-us .dropbtn {
@@ -329,7 +355,6 @@ h1 {
   font-size: 16px;
   border: none;
   width: 100%;
-  margin-top: 3rem;
   position: relative;
 }
 
@@ -397,6 +422,7 @@ h1 {
   font-size: 2rem;
   width: 50%;
   text-align: center;
+  margin-bottom: 6rem;
 }
 
 .roster {

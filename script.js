@@ -19,125 +19,48 @@ let hodnoceni = () => {
   hodnoceniDiv.innerHTML = hodnoceniOptions[range.value];
 };
 
-//PopUp s faktama o CuteBoysUwU
+let clickCount = 0;
+var factsSound = new Audio("assets/facts.mp3");
 
-// document.body.onload = addElement;
+let tatoFunkceNicNedela = () => {
+  clickCount++;
+  fetch("https://api.countapi.xyz/update/Super_Stranka/ZULUL/?amount=1");
 
-// const factsheadings = [
-//   "tady bude nadpis prvního faktu",
-//   "tady bude nadpis druhého faktu",
-//   "tady bude nadpis třetího faktu",
-//   "tady bude nadpis čtvrtého faktu",
-//   "tady bude nadpis pátého faktu",
-//   "tady bude nadpis šestého faktu",
-//   "tady bude nadpis sedmého faktu",
-//   "tady bude nadpis osmého faktu",
-//   "tady bude nadpis devátého faktu",
-//   "tady bude nadpis desátého faktu",
-// ];
-
-// const facts = [
-//   "tady bude první fakt",
-//   "tady bude druhý fakt",
-//   "tady bude třetí fakt",
-//   "tady bude čtvrtý fakt",
-//   "tady bude pátý fakt",
-//   "tady bude šestý fakt",
-//   "tady bude sedmý fakt",
-//   "tady bude osmý fakt",
-//   "tady bude devátý fakt",
-//   "tady bude desátý fakt",
-// ];
-
-// function getRandomInt(max) {
-//   return Math.floor(Math.random() * max);
-// }
-
-// function addElement() {
-//   let currentFact = getRandomInt(10);
-
-//   const newDiv = document.createElement("div");
-//   const newHeading = document.createElement("h1");
-//   const newParagraph = document.createElement("p");
-//   const newButton = document.createElement("button");
-
-//   let newFactHeading = document.createTextNode(factsheadings[currentFact]);
-//   let newFact = document.createTextNode(facts[currentFact]);
-//   let newCloseButton = document.createTextNode("×");
-
-//   newHeading.appendChild(newFactHeading);
-//   newParagraph.appendChild(newFact);
-//   newButton.appendChild(newCloseButton);
-//   newDiv.appendChild(newHeading);
-//   newDiv.appendChild(newButton);
-//   newDiv.appendChild(newParagraph);
-//   newDiv.className = "funfact";
-
-//   const currentDiv = document.getElementById("home");
-//   document.body.insertBefore(newDiv, currentDiv);
-
-//   newButton.onclick = function closeFacts() {
-//     document.body.removeChild(newDiv);
-//   };
-
-/**/ let clickCount = 0;
-/**/ var easterEgg = new Audio("assets/facts.mp3");
-
-/**/ let tatoFunkceNicNedela = () => {
-  /**/ clickCount++;
-
-  /**/ if (clickCount == 50) {
-    /**/ easterEgg.play();
-    /**/ clickCount = 0;
-    /**/
+  if (clickCount == 50) {
+    factsSound.play();
+    clickCount = 0;
   }
-  /**/
 };
 
-//   function vygenerovatFakt() {
-//     let oldFact = currentFact;
-//     currentFact = getRandomInt(10);
+// PopUp s faktama o CuteBoysUwU
 
-//     if (currentFact == oldFact) {
-//       currentFact = getRandomInt(10);
-//     }
+const facts = [
+  'Tým se měl originálně jmenovat "cute gays uwu", ale kvůli potenciálním kontroverzím se název změnil',
+  'Inspirace na jméno vznikla díky steam komentáři pod profilem našeho spoluhráče, kde bylo "+rep cute gay uwu"',
+  "Náš tým vyhrál SpojeCup bez ztráty jediné mapy",
+  "MVP turnaje se stal těsně hráč Ace Effect, který hrál konzistentně každou hru",
+  "Ačkoliv to bude šok, většina z nás nejsou weebové",
+  "Tým má vlastního manažéra (Adama Náděje), který před každým zápasem poskytoval psychickou podporu",
+  "Není dobrý nápad proti nám hrát mirage",
+  "Tradicí týmu před každým turnajovým zápasem je prohrát faceit hru",
+  "V roster kartě hráče Čenda je napsáno, že byl faceit 8, ale není to pravda, programátor stránky byl podplacen, aby to tam uvedl",
+  "Ace Effect doopravdy nedupe své přítelkyni na hlavu",
+  "Je lehčí vyhrát Major, než najít Ghadenovu fotku s jeho obličejem",
+  "mthwm kupuje discord nitro náhodným ženám na internetu",
+  "Havelos a Čenda nejsou rasisti, to slovo na n je pouze navykové říkat",
+  "Ace Effect rád trashtalkuje své protivníky",
+  "mthwm je nejvíce reportovaný hráč týmu",
+  'Velký vliv na naše vítězství v zápasech je "Havel pauza"',
+  "Nejvíce banovaná mapa týmu je cache",
+  "Za celý SpojeCup cute boys uwu nikdy neprohráli ani jednou CT side polovinu",
+  "V průběhu SpojeCup cute boys uwu preferovali AUG oproti M4",
+  "Tým trénuje den a noc na SpojeCup 2",
+];
 
-//     newHeading.removeChild(newFactHeading);
-//     newParagraph.removeChild(newFact);
+let getRandomInt = (max) => {
+  return Math.floor(Math.random() * max);
+};
 
-//     newFactHeading = document.createTextNode(factsheadings[currentFact]);
-//     newFact = document.createTextNode(facts[currentFact]);
-
-//     newHeading.appendChild(newFactHeading);
-//     newParagraph.appendChild(newFact);
-//   }
-
-//   function updateTimer(pocetProcent) {
-//     newDiv.style.setProperty("--timer", `${pocetProcent}%`);
-//   }
-
-//   var i = 1;
-
-//   function myLoop() {
-//     setTimeout(function () {
-//       updateTimer(i);
-//       i++;
-
-//       if (i < 100) {
-//         myLoop();
-//       }
-//     }, 100);
-//   }
-
-//   function dalsiFakt() {
-//     setTimeout(function () {
-//       i = 0;
-//       vygenerovatFakt();
-//       dalsiFakt();
-//     }, 10000);
-
-//     myLoop(newDiv);
-//   }
-
-//   dalsiFakt();
-// }
+let toggleFacts = () => {
+  //
+};

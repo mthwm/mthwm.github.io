@@ -38,6 +38,32 @@ body {
   background: #555;
 }
 
+#factsToggle {
+  position: fixed;
+  z-index: 1;
+  bottom: 2rem;
+  right: 4rem;
+  z-index: 10;
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  i {
+    color: white;
+    transition: all 0.125s ease-in-out;
+    -webkit-transition: all 0.125s ease-in-out;
+    -moz-transition: all 0.125s ease-in-out;
+    -ms-transition: all 0.125s ease-in-out;
+    -o-transition: all 0.125s ease-in-out;
+  }
+
+  &:hover {
+    i {
+      color: #6f00ff;
+    }
+  }
+}
+
 .nav-wrapper {
   display: flex;
   height: 7rem;
@@ -127,11 +153,6 @@ body {
   height: 100vh;
   z-index: 5;
   position: relative;
-  // background: linear-gradient(
-  //   180deg,
-  //   rgba(22, 22, 22, 1) 15%,
-  //   rgba(4, 4, 4, 1) 100%
-  // );
 
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(5, 5, 5, 1)),
     url(assets/bg.jpeg);
@@ -198,13 +219,21 @@ body {
         border: solid 15px white;
         border-radius: 50%;
         cursor: pointer;
-
         position: relative;
 
         &:hover {
           border-color: #6f00ff;
           box-shadow: #6f00ff 0 0 10px;
+
+          i {
+            color: #6f00ff;
+          }
         }
+        transition: all ease-in-out 0.25s;
+        -webkit-transition: all ease-in-out 0.25s;
+        -moz-transition: all ease-in-out 0.25s;
+        -ms-transition: all ease-in-out 0.25s;
+        -o-transition: all ease-in-out 0.25s;
       }
 
       i {
@@ -265,7 +294,6 @@ h1 {
     rgba(4, 4, 4, 1) 100%
   );
 
-  /* Dropdown Button */
   .dropbtn {
     font-family: "Bebas Neue", cursive;
     background-color: #6f00ff;
@@ -274,11 +302,9 @@ h1 {
     font-size: 16px;
     border: none;
     width: 100%;
-    margin-top: 3rem;
     position: relative;
   }
 
-  /* The container <div> - needed to position the dropdown content */
   .dropdown {
     position: relative;
     display: inline-block;
@@ -289,7 +315,6 @@ h1 {
     -o-transform: scale(1.5);
   }
 
-  /* Dropdown Content (Hidden by Default) */
   .dropdown-content {
     display: none;
     position: absolute;
@@ -299,7 +324,6 @@ h1 {
     z-index: 1;
   }
 
-  /* Links inside the dropdown */
   .dropdown-content a {
     color: black;
     padding: 12px 16px;
@@ -313,17 +337,14 @@ h1 {
     margin-right: 0.5rem;
   }
 
-  /* Change color of dropdown links on hover */
   .dropdown-content a:hover {
     background-color: #ddd;
   }
 
-  /* Show the dropdown menu on hover */
   .dropdown:hover .dropdown-content {
     display: block;
   }
 
-  /* Change the background color of the dropdown button when the dropdown content is shown */
   .dropdown:hover .dropbtn {
     background-color: #bf00ff;
   }
@@ -346,6 +367,7 @@ h1 {
     font-size: 2rem;
     width: 50%;
     text-align: center;
+    margin-bottom: 6rem;
   }
 }
 
@@ -799,62 +821,6 @@ h1 {
     left: 0;
   }
 }
-
-// .funfact {
-//   position: fixed;
-//   bottom: 50px;
-//   right: 50px;
-//   background-color: none;
-//   color: white;
-//   background-color: rgba(255, 255, 255, 0.041);
-//   width: 400px;
-//   height: 150px;
-//   z-index: 999999;
-//   padding: 25px;
-//   border-radius: 25px;
-//   box-shadow: 5px 5px 10px 8px hsla(0, 0%, 0%, 0.445);
-//   backdrop-filter: blur(5px);
-//   overflow: hidden;
-
-//   &::after {
-//     position: absolute;
-//     content: "";
-//     width: var(--timer);
-//     height: 5px;
-//     bottom: 0;
-//     left: 0;
-//     transition: all ease 250ms;
-//     background-color: var(--clr-secondary);
-//   }
-
-//   h1 {
-//     font-family: "Mukta", sans-serif;
-//     font-size: 1.5em;
-//     margin-top: 0;
-//   }
-
-//   p {
-//     font-family: "Mukta", sans-serif;
-//     font-size: 1em;
-//   }
-
-//   button {
-//     background: none;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     border: none;
-//     color: var(--clr-primary);
-//     font-size: 2em;
-//     position: absolute;
-//     top: 25px;
-//     right: 25px;
-//     padding: 0;
-//     width: 25px;
-//     height: 25px;
-//     cursor: pointer;
-//   }
-// }
 
 footer {
   background-color: #101010;
