@@ -47,7 +47,7 @@ body {
 
 .factsDiv {
   width: 20vw;
-  height: 10vh;
+  height: 20vh;
   background: #6f00ff;
   position: fixed;
   bottom: 2rem;
@@ -60,11 +60,70 @@ body {
   -o-transition: all 0.125s ease-in-out;
 }
 
+.factsDiv i {
+  transition: all 0.125s ease-in-out;
+  -webkit-transition: all 0.125s ease-in-out;
+  -moz-transition: all 0.125s ease-in-out;
+  -ms-transition: all 0.125s ease-in-out;
+  -o-transition: all 0.125s ease-in-out;
+}
+
+.factsDiv .factsSkip {
+  position: absolute;
+  width: 90%;
+  height: 15%;
+  bottom: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.factsDiv .factsSkip i {
+  color: white;
+}
+
+.factsDiv .factsSkip .nextFact {
+  width: 20%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+
+.factsDiv .factsSkip .nextFact:hover i {
+  text-shadow: black 0 0 10px;
+}
+
+.factsDiv .factsSkip .previousFact {
+  width: 20%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+
+.factsDiv .factsSkip .previousFact:hover i {
+  text-shadow: black 0 0 10px;
+}
+
 .factsDiv .closeFacts {
   position: relative;
   left: 0;
   top: 0;
   height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
   width: 10%;
   display: -ms-grid;
   display: grid;
@@ -1540,6 +1599,7 @@ footer .mthwm-links a:hover {
   }
   .factsDiv {
     width: 100%;
+    height: 15vh;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -63,6 +63,9 @@ let toggleFacts = () => {
 
   const factsDiv = document.createElement("div");
   const closeFacts = document.createElement("div");
+  const factsSkip = document.createElement("div");
+  const nextFact = document.createElement("div");
+  const previousFact = document.createElement("div");
   closeFacts.onclick = () => {
     factsDiv.style.width = "0";
     factsDiv.style.right = "-5rem";
@@ -72,18 +75,27 @@ let toggleFacts = () => {
   };
   document.body.appendChild(factsDiv);
   factsDiv.appendChild(closeFacts);
+  factsDiv.appendChild(factsSkip);
+  factsSkip.appendChild(previousFact);
+  factsSkip.appendChild(nextFact);
   closeFacts.innerHTML = '<i class="fas fa-chevron-right"></i>';
+  nextFact.innerHTML = '<i class="fas fa-chevron-right"></i>';
+  previousFact.innerHTML = '<i class="fas fa-chevron-left"></i>';
   closeFacts.className = "closeFacts";
   factsDiv.className = "factsDiv";
+  factsSkip.className = "factsSkip";
+  nextFact.className = "nextFact";
+  previousFact.className = "previousFact";
   factsDiv.style.width = "0vw";
   factsDiv.style.right = "-5rem";
+  factsDiv.style.bottom = "0";
   setTimeout(function () {
     factsDiv.style.right = "0";
+
     function myFunction(x) {
       if (x.matches) {
-        // If media query matches
         factsDiv.style.width = "100vw";
-        factsDiv.style.bottom = "0";
+
         factsDiv.style.height = "15vh";
       } else {
         factsDiv.style.width = "30vw";
@@ -91,8 +103,8 @@ let toggleFacts = () => {
     }
 
     var x = window.matchMedia("(max-width: 935px)");
-    myFunction(x); // Call listener function at run time
-    x.addListener(myFunction); // Attach listener function on state changes
+    myFunction(x);
+    x.addListener(myFunction);
 
     setTimeout(function () {
       //
