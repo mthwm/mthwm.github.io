@@ -677,3 +677,100 @@ footer {
     transform: rotate(5deg) scale(3);
   }
 }
+
+@media screen and (max-width: 1160px) {
+  main {
+    padding-left: 0;
+    padding-right: 0;
+    height: 200vh;
+    margin-bottom: 50vh;
+  }
+
+  .parent {
+    top: 5vh;
+    display: flex;
+    flex-direction: column;
+
+    .div1 {
+      height: 85vh;
+      overflow: visible;
+    }
+
+    .img-container {
+      height: 60vh;
+      width: 100%;
+      margin-bottom: 5vh;
+    }
+
+    button {
+      font-size: 1rem;
+    }
+
+    .div3 {
+      height: 15vh;
+
+      h1 {
+        font-size: 7vw;
+      }
+
+      b {
+        font-size: 7vw;
+        margin-inline: 2vw;
+
+        &::before,
+        &::after {
+          font-size: 10vw;
+        }
+      }
+    }
+
+    .div4 {
+      font-size: 5vw;
+      margin-bottom: 10vh;
+
+      .text {
+        &::before {
+          left: -8vw;
+        }
+
+        &::after {
+          right: -8vw;
+        }
+
+        &::before,
+        &::after {
+          font-size: 20vw;
+          top: -5vh;
+        }
+      }
+    }
+
+    .div5,
+    .div6,
+    .div7,
+    .div8 {
+      min-height: 15vh;
+    }
+
+    .div9 {
+      margin-top: 10vh;
+
+      a {
+        margin-inline: 5vw;
+      }
+    }
+  }
+
+  footer .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  footer {
+    height: 50vh;
+  }
+
+  .mthwm-links {
+    margin-bottom: 10vh;
+  }
+}
