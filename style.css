@@ -197,6 +197,30 @@ body {
   color: #6f00ff;
 }
 
+#aimTrainer {
+  position: fixed;
+  z-index: 1;
+  bottom: 2rem;
+  left: 4rem;
+  z-index: 10;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+#aimTrainer i {
+  color: white;
+  transition: all 0.125s ease-in-out;
+  -webkit-transition: all 0.125s ease-in-out;
+  -moz-transition: all 0.125s ease-in-out;
+  -ms-transition: all 0.125s ease-in-out;
+  -o-transition: all 0.125s ease-in-out;
+}
+
+#aimTrainer:hover i {
+  color: #6f00ff;
+}
+
 .nav-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
