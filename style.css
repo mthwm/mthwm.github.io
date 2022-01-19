@@ -1598,6 +1598,9 @@ footer .mthwm-links a:hover {
   #factsToggle {
     right: 2rem;
   }
+  #aimTrainer {
+    left: 2rem;
+  }
   .Heading {
     -ms-grid-row: 1;
     -ms-grid-column: 1;

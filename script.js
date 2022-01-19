@@ -52,7 +52,7 @@ const facts = [
   "(15) mthwm je nejvíce reportovaný hráč týmu",
   '(16) Velký vliv na naše vítězství v zápasech je "Havel pauza"',
   "(17) Nejvíce banovaná mapa týmu je cache",
-  "(18) Za celý SpojeCup cute boys uwu nikdy neprohráli ani jednou CT side polovinu",
+  "(18) Za celý SpojeCup cute boys uwu neprohráli ani jednou CT side polovinu",
   "(19) V průběhu SpojeCup cute boys uwu preferovali AUG oproti M4",
   "(20) Tým trénuje den a noc na SpojeCup 2",
 ];
